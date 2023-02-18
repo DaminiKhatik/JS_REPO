@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Using window.prompt()
+    </title>
+</head>
+<body>
+    <h1>Using window.prompt()
+    </h1>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      let person = prompt("Please enter your name", "");
+      if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "! How  old are you";
+      }
+    }
+    </script>
+</body>
+</html>
