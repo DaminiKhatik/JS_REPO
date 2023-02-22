@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word count program</title>
+</head>
+<body>
+    <body style="text-align: center;">
+        <h1 style="color: green">
+        Word count program
+        </h1>
+    
+        <p>
+            Type in the textbox to
+            automatically count the words
+        </p>
+    
+        <textarea id="word" oninput="countWord()" rows="10" cols="60">
+        </textarea>
+        <br><br>
+    
+        <p> Word Count:
+            <span id="show">0</span>
+        </p>
+    
+        <script>
+            function countWord() {
+            
+                var words = document
+                    .getElementById("word").value;
+            
+                var count = 0;
+        
+                var split = words.split(' ');
+                for (var i = 0; i < split.length; i++) {
+                    if (split[i] != "") {
+                        count += 1;
+                    }
+                }
+                document.getElementById("show")
+                    .innerHTML = count;
+            }
+        </script>
+    </body>
+    
+</body>
+</html>
